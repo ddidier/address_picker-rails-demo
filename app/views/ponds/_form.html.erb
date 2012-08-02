@@ -1,0 +1,70 @@
+<%= form_for(@pond) do |f| %>
+
+    <% if @pond.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@pond.errors.count, "error") %> prohibited this pond from being saved:</h2>
+
+          <ul>
+            <% @pond.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <!-- ============================================================================ -->
+
+    <div class="field">
+      <%= f.label :address %>
+      <br />
+      <%= f.text_field :address, :class => 'address-picker-input' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address_latitude %>
+      <br />
+      <%= f.text_field :address_latitude, :readonly => true, :class => 'address-picker-latitude' %> </div>
+
+    <div class="field">
+      <%= f.label :address_longitude %>
+      <br />
+      <%= f.text_field :address_longitude, :readonly => true, :class => 'address-picker-longitude' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address_locality %>
+      <br />
+      <%= f.text_field :address_locality, :readonly => true, :class => 'address-picker-locality' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address_country %>
+      <br />
+      <%= f.text_field :address_country, :readonly => true, :class => 'address-picker-country' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address_map %>
+      <br />
+
+      <div id="pond_address_map_wrapper" class="address-picker-map-wrapper">
+        <div class="address-picker-legend">You can drag and drop the marker to the correct location</div>
+        <div id="pond_address_map" class="address-picker-map"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        var picker = new AddressPickerRails.Picker({idPrefix:"pond_address"});
+        picker.apply(function (railsPicker) {
+            console.debug("callback for a single pond with ID '%s'", railsPicker.getIdPrefix());
+        });
+    </script>
+
+    <!-- ============================================================================ -->
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+<% end %>
+

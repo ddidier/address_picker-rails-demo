@@ -1,0 +1,62 @@
+
+gem 'address_picker-rails'
+
+
+
+    <%= f.text_field :address, :class => 'address-picker-input' %>
+
+    <%= f.text_field :address_latitude, :readonly => true, :class => 'address-picker-latitude' %>
+    <%= f.text_field :address_longitude, :readonly => true, :class => 'address-picker-longitude' %>
+
+    <%#= f.text_field :address_locality, :readonly => true, :class => 'address-picker-locality' %>
+    <%#= f.text_field :address_country, :readonly => true, :class => 'address-picker-country' %>
+
+***** attention à l'id (prefix)
+    <div id="address_map_wrapper" class="address-picker-map-wrapper">
+      <div class="address-picker-legend">You can drag and drop the marker to the correct location</div>
+      <div id="address_map" class="address-picker-map"></div>
+    </div>
+
+
+
+
+//= require address_picker-rails  (includes address_picker and juery-ui)
+***** changement de nom : AddressPickerRails.apply();
+
+
+
+jquery-ui-theme
+
+
+
+.address-picker-map {
+  border: 1px solid #DDD;
+  width: 218px;
+  height: 218px;
+}
+
+.address-picker-input {
+}
+
+.address-picker-latitude {
+}
+
+.address-picker-longitude {
+}
+
+.address-picker-locality {
+}
+
+.address-picker-country {
+}
+
+.address-picker-map {
+}
+
+.address-picker-map-wrapper {
+  display: none;
+}
+
+.address-picker-legend {
+}
+

@@ -1,0 +1,37 @@
+<h1>Listing migrations</h1>
+
+<table>
+  <tr>
+    <th>Departure at</th>
+    <th>Arrival at</th>
+    <th>From pond</th>
+    <th>From pond latitude</th>
+    <th>From pond longitude</th>
+    <th>To pond</th>
+    <th>To pond latitude</th>
+    <th>To pond longitude</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @migrations.each do |migration| %>
+      <tr>
+        <td><%= migration.departure_at %></td>
+        <td><%= migration.arrival_at %></td>
+        <td><%= migration.from_pond %></td>
+        <td><%= migration.from_pond_latitude %></td>
+        <td><%= migration.from_pond_longitude %></td>
+        <td><%= migration.to_pond %></td>
+        <td><%= migration.to_pond_latitude %></td>
+        <td><%= migration.to_pond_longitude %></td>
+        <td><%= link_to 'Show', migration %></td>
+        <td><%= link_to 'Edit', edit_migration_path(migration) %></td>
+        <td><%= link_to 'Destroy', migration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Migration', new_migration_path %>

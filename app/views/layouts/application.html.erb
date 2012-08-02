@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rails3BootstrapDeviseCancan</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<h1 class="banner">
+  <%= link_to(root_path) do %>
+      <img src="https://secure.gravatar.com/avatar/6b55b77db70a52f71e1239e6509c0a17">
+      Address Picker Rails -- Demo
+  <% end %>
+</h1>
+
+<p>
+  <%= yield %>
+</p>
+
+</body>
+</html>

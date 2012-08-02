@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Departure at:</b>
+  <%= @migration.departure_at %>
+</p>
+
+<p>
+  <b>Arrival at:</b>
+  <%= @migration.arrival_at %>
+</p>
+
+<p>
+  <b>From pond:</b>
+  <%= @migration.from_pond %>
+</p>
+
+<p>
+  <b>From pond latitude:</b>
+  <%= @migration.from_pond_latitude %>
+</p>
+
+<p>
+  <b>From pond longitude:</b>
+  <%= @migration.from_pond_longitude %>
+</p>
+
+<p>
+  <b>To pond:</b>
+  <%= @migration.to_pond %>
+</p>
+
+<p>
+  <b>To pond latitude:</b>
+  <%= @migration.to_pond_latitude %>
+</p>
+
+<p>
+  <b>To pond longitude:</b>
+  <%= @migration.to_pond_longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_migration_path(@migration) %> |
+<%= link_to 'Back', migrations_path %>

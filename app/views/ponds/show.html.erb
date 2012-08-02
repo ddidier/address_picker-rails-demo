@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Address:</b>
+  <%= @pond.address %>
+</p>
+
+<p>
+  <b>Address latitude:</b>
+  <%= @pond.address_latitude %>
+</p>
+
+<p>
+  <b>Address longitude:</b>
+  <%= @pond.address_longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_pond_path(@pond) %> |
+<%= link_to 'Back', ponds_path %>

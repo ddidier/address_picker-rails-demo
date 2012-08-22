@@ -15,8 +15,8 @@ HOST_OS = RbConfig::CONFIG['host_os']
 gem 'address_picker-rails', '0.2.0'
 
 gem 'jquery-rails',         '~> 2.0.0'
+gem 'pg',                   '~> 0.13.0'
 gem 'rails',                '~> 3.2.0'
-gem 'sqlite3'
 gem 'simple_form',          '~> 2.0.0'
 
 

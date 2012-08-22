@@ -4,7 +4,6 @@ require 'rbconfig'
 source 'http://rubygems.org'
 
 HOST_OS = RbConfig::CONFIG['host_os']
-THIRD_PARTY = "#{File.expand_path(__FILE__)}/../../../Third-Party"
 
 
 
@@ -12,7 +11,8 @@ THIRD_PARTY = "#{File.expand_path(__FILE__)}/../../../Third-Party"
 # commons
 # ----------------------------------------------------------------------------------------------------------------------
 
-gem 'address_picker-rails',               :path => "#{THIRD_PARTY}/address_picker-rails"
+#gem 'address_picker-rails',:path => "#{File.expand_path(__FILE__)}/../../../Third-Party/address_picker-rails"
+gem 'address_picker-rails', '0.2.0'
 
 gem 'jquery-rails',         '~> 2.0.0'
 gem 'rails',                '~> 3.2.0'

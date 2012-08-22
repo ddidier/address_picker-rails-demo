@@ -28,67 +28,75 @@
 
     <!-- ============================================================================ -->
 
-    <div class="field">
-      <%= f.label :from_pond %>
-      <br />
-      <%= f.text_field :from_pond, :class => 'address-picker-input' %>
-    </div>
+    <fieldset>
+      <legend>From pond</legend>
 
-    <div class="field">
-      <%= f.label :from_pond_latitude %>
-      <br />
-      <%= f.text_field :from_pond_latitude, :readonly => true, :class => 'address-picker-latitude' %> </div>
-
-    <div class="field">
-      <%= f.label :from_pond_longitude %>
-      <br />
-      <%= f.text_field :from_pond_longitude, :readonly => true, :class => 'address-picker-longitude' %>
-    </div>
-
-    <%#= f.text_field :from_pond_locality, :readonly => true, :class => 'address-picker-locality' %>
-    <%#= f.text_field :from_pond_country, :readonly => true, :class => 'address-picker-country' %>
-
-    <div class="field">
-      <%= f.label :from_pond_map %>
-      <br />
-
-      <div id="migration_from_pond_map_wrapper" class="address-picker-map-wrapper">
-        <div class="address-picker-legend">You can drag and drop the marker to the correct location</div>
-        <div id="migration_from_pond_map" class="address-picker-map"></div>
+      <div class="field">
+        <%= f.label :from_pond %>
+        <br />
+        <%= f.text_field :from_pond, :class => 'address-picker-input' %>
       </div>
-    </div>
+
+      <div class="field">
+        <%= f.label :from_pond_latitude %>
+        <br />
+        <%= f.text_field :from_pond_latitude, :readonly => true, :class => 'address-picker-latitude' %> </div>
+
+      <div class="field">
+        <%= f.label :from_pond_longitude %>
+        <br />
+        <%= f.text_field :from_pond_longitude, :readonly => true, :class => 'address-picker-longitude' %>
+      </div>
+
+      <%#= f.text_field :from_pond_locality, :readonly => true, :class => 'address-picker-locality' %>
+      <%#= f.text_field :from_pond_country, :readonly => true, :class => 'address-picker-country' %>
+
+      <div class="field">
+        <%= f.label :from_pond_map %>
+        <br />
+
+        <div id="migration_from_pond_map_wrapper" class="address-picker-map-wrapper">
+          <div class="address-picker-legend">You can drag and drop the marker to the correct location</div>
+          <div id="migration_from_pond_map" class="address-picker-map"></div>
+        </div>
+      </div>
+    </fieldset>
 
     <!-- ============================================================================ -->
 
-    <div class="field">
-      <%= f.label :to_pond %>
-      <br />
-      <%= f.text_field :to_pond, :class => 'address-picker-input' %>
-    </div>
+    <fieldset>
+      <legend>To pond</legend>
 
-    <div class="field">
-      <%= f.label :to_pond_latitude %>
-      <br />
-      <%= f.text_field :to_pond_latitude, :readonly => true, :class => 'address-picker-latitude' %> </div>
-
-    <div class="field">
-      <%= f.label :to_pond_longitude %>
-      <br />
-      <%= f.text_field :to_pond_longitude, :readonly => true, :class => 'address-picker-longitude' %>
-    </div>
-
-    <%#= f.text_field :to_pond_locality, :readonly => true, :class => 'address-picker-locality' %>
-    <%#= f.text_field :to_pond_country, :readonly => true, :class => 'address-picker-country' %>
-
-    <div class="field">
-      <%= f.label :to_pond_map %>
-      <br />
-
-      <div id="migration_to_pond_map_wrapper" class="address-picker-map-wrapper">
-        <div class="address-picker-legend">You can drag and drop the marker to the correct location</div>
-        <div id="migration_to_pond_map" class="address-picker-map"></div>
+      <div class="field">
+        <%= f.label :to_pond %>
+        <br />
+        <%= f.text_field :to_pond, :class => 'address-picker-input' %>
       </div>
-    </div>
+
+      <div class="field">
+        <%= f.label :to_pond_latitude %>
+        <br />
+        <%= f.text_field :to_pond_latitude, :readonly => true, :class => 'address-picker-latitude' %> </div>
+
+      <div class="field">
+        <%= f.label :to_pond_longitude %>
+        <br />
+        <%= f.text_field :to_pond_longitude, :readonly => true, :class => 'address-picker-longitude' %>
+      </div>
+
+      <%#= f.text_field :to_pond_locality, :readonly => true, :class => 'address-picker-locality' %>
+      <%#= f.text_field :to_pond_country, :readonly => true, :class => 'address-picker-country' %>
+
+      <div class="field">
+        <%= f.label :to_pond_map %>
+        <br />
+
+        <div id="migration_to_pond_map_wrapper" class="address-picker-map-wrapper">
+          <div class="address-picker-legend">You can drag and drop the marker to the correct location</div>
+          <div id="migration_to_pond_map" class="address-picker-map"></div>
+        </div>
+      </div>
+    </fieldset>
 
     <!-- ============================================================================ -->
 

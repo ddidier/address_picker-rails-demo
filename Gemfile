@@ -1,9 +1,6 @@
+source 'https://rubygems.org'
 
-require 'rbconfig'
-
-source 'http://rubygems.org'
-
-HOST_OS = RbConfig::CONFIG['host_os']
+ruby '1.9.3'
 
 
 
@@ -11,13 +8,13 @@ HOST_OS = RbConfig::CONFIG['host_os']
 # commons
 # ----------------------------------------------------------------------------------------------------------------------
 
-#gem 'address_picker-rails',:path => "#{File.expand_path(__FILE__)}/../../../Third-Party/address_picker-rails"
-gem 'address_picker-rails', '0.2.0'
+gem 'address_picker-rails',               :path => "/home/ddidier/Projets/Owner/address_picker-rails"
+#gem 'address_picker-rails', '0.2.1'
 
-gem 'jquery-rails',         '~> 2.0.0'
-gem 'pg',                   '~> 0.13.0'
+gem 'jquery-rails',         '~> 2.2.0'
+gem 'pg',                   '~> 0.14.0'
 gem 'rails',                '~> 3.2.0'
-gem 'simple_form',          '~> 2.0.0'
+gem 'simple_form',          '~> 2.1.0'
 
 
 
@@ -27,12 +24,11 @@ gem 'simple_form',          '~> 2.0.0'
 # ----------------------------------------------------------------------------------------------------------------------
 
 group :assets do
-  gem 'bootstrap-sass',   '~> 2.0.0'
-  gem 'coffee-rails',     '~> 3.2.0'
-  gem 'sass-rails',       '~> 3.2.0'
-  gem 'therubyracer',     '~> 0.10.0',  :platform => :ruby
-  gem 'uglifier',         '~> 1.2.0'
-  gem 'jquery-ui-themes', '~> 0.0.0'
+  gem 'bootstrap-sass',     '~> 2.0.0'
+  gem 'coffee-rails',       '~> 3.2.0'
+  gem 'sass-rails',         '~> 3.2.0'
+  gem 'uglifier',           '~> 1.3.0'
+  gem 'jquery-ui-themes',   '~> 0.0.0'
 end
 
 
@@ -42,30 +38,19 @@ end
 # ----------------------------------------------------------------------------------------------------------------------
 
 group :development do
-  gem 'guard',            '~> 1.2.0'
-  gem 'guard-bundler',    '~> 1.0.0'
-  gem 'guard-livereload', '~> 1.0.0'
-  gem 'guard-rails',      '~> 0.1.0'
-  gem 'guard-rspec',      '~> 1.2.0'
-  gem 'guard-spork',      '~> 1.1.0'
-  gem 'spork',            ' > 1.0.0.rc'
+  gem 'better_errors',      '~> 0.7.0'
+  gem 'binding_of_caller',  '~> 0.7.0'
+  gem 'sextant',            '~> 0.2.0'
 
-  case HOST_OS
-    when /darwin/i
-      gem 'growl'
-      gem 'rb-fsevent'
-    when /linux/i
-      gem 'libnotify'
-      gem 'rb-inotify'
-    when /mswin|windows/i
-      gem 'rb-fchange'
-      gem 'rb-notifu'
-      gem 'win32console'
-  end
-
-  #if HOST_OS =~ /linux/i
-  #  gem 'therubyracer',   '~> 0.10.0'
-  #end
+  # before guard
+  gem 'libnotify',          '~> 0.8.0'
+  gem 'rb-inotify',         '~> 0.9.0'
+  gem 'guard',              '~> 1.6.0'
+  gem 'guard-bundler',      '~> 1.0.0'
+  gem 'guard-rails',        '~> 0.3.0'
+  gem 'guard-rspec',        '~> 2.4.0'
+  gem 'guard-spork',        '~> 1.4.0'
+  gem 'spork',              ' > 1.0.0.rc'
 end
 
 
@@ -83,7 +68,7 @@ end
 # ----------------------------------------------------------------------------------------------------------------------
 
 group :development, :test do
-  gem 'quiet_assets',     '~> 1.0.0'
-  gem 'rspec-rails',      '~> 2.11.0'
-  gem 'shoulda-matchers', '~> 1.2.0'
+  gem 'quiet_assets',       '~> 1.0.0'
+  gem 'rspec-rails',        '~> 2.13.0'
+  gem 'shoulda-matchers',   '~> 1.5.0'
 end

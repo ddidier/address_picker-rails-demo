@@ -2,6 +2,7 @@ Rails3BootstrapDeviseCancan::Application.routes.draw do
 
   resources :ponds
   resources :migrations
+  resources :searches, only: [:new]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

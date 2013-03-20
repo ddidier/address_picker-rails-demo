@@ -8,7 +8,7 @@ ruby '1.9.3'
 # commons
 # ----------------------------------------------------------------------------------------------------------------------
 
-gem 'address_picker-rails', '0.2.1'
+gem 'address_picker-rails', '0.3.0'
 
 gem 'jquery-rails',         '~> 2.2.0'
 gem 'pg',                   '~> 0.14.0'
@@ -46,9 +46,9 @@ group :development do
   gem 'rb-inotify',         '~> 0.9.0'
   gem 'guard',              '~> 1.6.0'
   gem 'guard-bundler',      '~> 1.0.0'
-  gem 'guard-rails',        '~> 0.3.0'
-  gem 'guard-rspec',        '~> 2.4.0'
-  gem 'guard-spork',        '~> 1.4.0'
+  gem 'guard-rails',        '~> 0.4.0'
+  gem 'guard-rspec',        '~> 2.5.0'
+  gem 'guard-spork',        '~> 1.5.0'
   gem 'spork',              ' > 1.0.0.rc'
 end
 

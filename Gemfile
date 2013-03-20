@@ -8,8 +8,7 @@ ruby '1.9.3'
 # commons
 # ----------------------------------------------------------------------------------------------------------------------
 
-gem 'address_picker-rails',               :path => "/home/ddidier/Projets/Owner/address_picker-rails"
-#gem 'address_picker-rails', '0.2.1'
+gem 'address_picker-rails', '0.2.1'
 
 gem 'jquery-rails',         '~> 2.2.0'
 gem 'pg',                   '~> 0.14.0'

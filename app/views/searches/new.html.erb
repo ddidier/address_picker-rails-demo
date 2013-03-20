@@ -1,0 +1,89 @@
+<h1>Searching ponds - geocoding without a map</h1>
+
+<!-- ============================================================================ -->
+
+<h2>Only address</h2>
+
+<%= form_for(@pond, :as => :search_1) do |f| %>
+
+    <div class="field">
+      <%= f.label :address %>
+      <br />
+      <%= f.text_field :address, :class => 'address-picker-input' %>
+    </div>
+
+<% end %>
+
+<!-- ============================================================================ -->
+
+<h2>Only address and coordinates</h2>
+
+<%= form_for(@pond, :as => :search_2) do |f| %>
+
+    <div class="field">
+      <%= f.label :address %>
+      <br />
+      <%= f.text_field :address, :class => 'address-picker-input' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address_latitude %>
+      <br />
+      <%= f.text_field :address_latitude, :readonly => true, :class => 'address-picker-latitude' %> </div>
+
+    <div class="field">
+      <%= f.label :address_longitude %>
+      <br />
+      <%= f.text_field :address_longitude, :readonly => true, :class => 'address-picker-longitude' %>
+    </div>
+
+<% end %>
+
+<!-- ============================================================================ -->
+
+<h2>Only address and coordinates</h2>
+
+<%= form_for(@pond, :as => :search_3) do |f| %>
+
+    <div class="field">
+      <%= f.label :address %>
+      <br />
+      <%= f.text_field :address, :class => 'address-picker-input' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address_latitude %>
+      <br />
+      <%= f.text_field :address_latitude, :readonly => true, :class => 'address-picker-latitude' %> </div>
+
+    <div class="field">
+      <%= f.label :address_longitude %>
+      <br />
+      <%= f.text_field :address_longitude, :readonly => true, :class => 'address-picker-longitude' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address_locality %>
+      <br />
+      <%= f.text_field :address_locality, :readonly => true, :class => 'address-picker-locality' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address_country %>
+      <br />
+      <%= f.text_field :address_country, :readonly => true, :class => 'address-picker-country' %>
+    </div>
+
+<% end %>
+
+<!-- ============================================================================ -->
+
+<script type="text/javascript">
+    AddressPickerRails.Pickers.apply({
+        'onLoad':function (railsPicker) {
+            console.debug("callback for a single pond with ID '%s'", railsPicker.getIdPrefix());
+        }
+    });
+</script>
+
+<%= link_to 'Back', root_path %>

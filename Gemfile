@@ -10,7 +10,7 @@ ruby '1.9.3'
 
 gem 'address_picker-rails', '0.3.0'
 
-gem 'jquery-rails',         '~> 2.2.0'
+gem 'jquery-rails',         '~> 3.1.5'
 gem 'pg',                   '~> 0.14.0'
 gem 'rails',                '~> 3.2.0'
 gem 'simple_form',          '~> 2.1.0'
